@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html lang="id-ID" dir="ltr">
 
 <head>
@@ -11,38 +7,47 @@
   <title>Editor Gambar by Halip26</title>
   <meta name="description" content="Anda bisa edit gambar dengan mudah disini">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Editor Gambar Sederhana">
+  <meta name="twitter:description" content="Anda bisa edit gambar dengan mudah disini">
+  <meta name="twitter:site" content="@halip26">
+  <meta name="twitter:creator" content="@halip26">
+  <meta name="twitter:image" content="https://editor-gambar.vercel.app/assets/site-preview.png">
+  <meta property="og:url" content="https://editor-gambar.vercel.app/">
+  <meta property="og:title" content="Editor Gambar Sederhana">
+  <meta property="og:description" content="Anda bisa edit gambar dengan mudah disini">
+  <meta property="og:image" content="https://editor-gambar.vercel.app/assets/site-preview.png">
+
   <!--Styles-->
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link rel="icon" type="image/png" href="assets/icon.png">
 </head>
 
 <body>
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
   <div class="container disable">
-    <h2>Editor Gambar</h2>
+    <h2>Editor Gambar Sederhana</h2>
     <div class="wrapper">
       <div class="editor-panel">
         <div class="filter">
           <label class="title">Filters</label>
           <div class="options">
-            <button id="brightness" class="active">Brightness</button>
-            <button id="saturation">Saturation</button>
-            <button id="inversion">Inversion</button>
-            <button id="grayscale">Grayscale</button>
+            <button id="brightness" class="active">Kecerahan</button>
+            <button id="saturation">Saturasi</button>
+            <button id="inversion">Inversi</button>
+            <button id="grayscale">Skala abu-abu</button>
           </div>
           <div class="slider">
             <div class="filter-info">
-              <p class="name">Brighteness</p>
+              <p class="name">Kecerahan</p>
               <p class="value">100%</p>
             </div>
             <input type="range" value="100" min="0" max="200">
           </div>
         </div>
         <div class="rotate">
-          <label class="title">Rotate & Flip</label>
+          <label class="title">Putar & Balik</label>
           <div class="options">
             <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
             <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
@@ -56,7 +61,7 @@
       </div>
     </div>
     <div class="controls">
-      <button class="reset-filter">Reset Filters</button>
+      <button class="reset-filter">Setel Ulang Filter</button>
       <div class="row">
         <input type="file" class="file-input" accept="image/*" hidden>
         <button class="choose-img">Pilih Gambar</button>
