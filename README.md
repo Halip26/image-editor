@@ -22,9 +22,7 @@ This project is made with vanilla JavaScript. If you’re excited to view a demo
 
 <p>
 <img src="https://github.com/devicons/devicon/blob/master/icons/vscode/vscode-original.svg" title="VSCode" alt="VSCode" width="40" height="40"/>&nbsp;
-
 <img src="https://github.com/devicons/devicon/blob/master/icons/illustrator/illustrator-plain.svg" title="AdobeIllustrator" alt="AdobeIllustrator" width="40" height="40"/>&nbsp;
-
 </p>
 
 MIT License
