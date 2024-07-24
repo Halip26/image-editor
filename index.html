@@ -1,76 +1,110 @@
 <!DOCTYPE html>
 <html lang="id" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Editor Gambar by Halip26</title>
+    <!-- meta SEO -->
+    <meta
+      name="description"
+      content="Kamu bisa edit gambar dengan mudah disini"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Editor Gambar Sederhana" />
+    <meta
+      name="twitter:description"
+      content="Kamu bisa edit gambar dengan mudah disini"
+    />
+    <meta name="twitter:site" content="@halip26" />
+    <meta name="twitter:creator" content="@halip26" />
+    <meta
+      name="twitter:image"
+      content="https://editor-gambar.vercel.app/assets/site-preview.png"
+    />
+    <meta property="og:url" content="https://editor-gambar.vercel.app/" />
+    <meta property="og:title" content="Editor Gambar Sederhana" />
+    <meta
+      property="og:description"
+      content="Kamu bisa edit gambar dengan mudah disini"
+    />
+    <meta
+      property="og:image"
+      content="https://editor-gambar.vercel.app/assets/site-preview.png"
+    />
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Editor Gambar by Halip26</title>
-  <meta name="description" content="Anda bisa edit gambar dengan mudah disini">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Editor Gambar Sederhana">
-  <meta name="twitter:description" content="Anda bisa edit gambar dengan mudah disini">
-  <meta name="twitter:site" content="@halip26">
-  <meta name="twitter:creator" content="@halip26">
-  <meta name="twitter:image" content="https://editor-gambar.vercel.app/assets/site-preview.png">
-  <meta property="og:url" content="https://editor-gambar.vercel.app/">
-  <meta property="og:title" content="Editor Gambar Sederhana">
-  <meta property="og:description" content="Anda bisa edit gambar dengan mudah disini">
-  <meta property="og:image" content="https://editor-gambar.vercel.app/assets/site-preview.png">
+    <!--Styles-->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="icon" type="image/png" href="assets/icon.png" />
+  </head>
 
-  <!--Styles-->
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-  <link rel="icon" type="image/png" href="assets/icon.png">
-</head>
-
-<body>
-  <div class="container disable">
-    <h2>Editor Gambar Sederhana</h2>
-    <div class="wrapper">
-      <div class="editor-panel">
-        <div class="filter">
-          <label class="title">Filters</label>
-          <div class="options">
-            <button id="brightness" class="active">Kecerahan</button>
-            <button id="saturation">Saturasi</button>
-            <button id="inversion">Inversi</button>
-            <button id="grayscale">Skala abu-abu</button>
-          </div>
-          <div class="slider">
-            <div class="filter-info">
-              <p class="name">Kecerahan</p>
-              <p class="value">100%</p>
+  <body>
+    <div class="container disable">
+      <h2>
+        Editor Gambar by
+        <a
+          href="https://halip26.github.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Halip26</a
+        >
+      </h2>
+      <div class="wrapper">
+        <div class="editor-panel">
+          <div class="filter">
+            <label class="title">Filters</label>
+            <div class="options">
+              <button id="brightness" class="active">Kecerahan</button>
+              <button id="saturation">Saturasi</button>
+              <button id="inversion">Inversi</button>
+              <button id="grayscale">Skala abu-abu</button>
             </div>
-            <input type="range" value="100" min="0" max="200">
+            <div class="slider">
+              <div class="filter-info">
+                <p class="name">Kecerahan</p>
+                <p class="value">100%</p>
+              </div>
+              <input type="range" value="100" min="0" max="200" />
+            </div>
+          </div>
+          <div class="rotate">
+            <label class="title">Putar & Balik</label>
+            <div class="options">
+              <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+              <button id="right">
+                <i class="fa-solid fa-rotate-right"></i>
+              </button>
+              <button id="horizontal">
+                <i class="bx bx-reflect-vertical"></i>
+              </button>
+              <button id="vertical">
+                <i class="bx bx-reflect-horizontal"></i>
+              </button>
+            </div>
           </div>
         </div>
-        <div class="rotate">
-          <label class="title">Putar & Balik</label>
-          <div class="options">
-            <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
-            <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
-            <button id="horizontal"><i class="bx bx-reflect-vertical"></i></button>
-            <button id="vertical"><i class="bx bx-reflect-horizontal"></i></button>
-          </div>
+        <div class="preview-img">
+          <img src="assets/image-placeholder.svg" alt="preview-img" />
         </div>
       </div>
-      <div class="preview-img">
-        <img src="assets/image-placeholder.svg" alt="preview-img">
+      <div class="controls">
+        <button class="reset-filter">Setel Ulang Filter</button>
+        <div class="row">
+          <input type="file" class="file-input" accept="image/*" hidden />
+          <button class="choose-img">Pilih Gambar</button>
+          <button class="save-img">Simpan Gambar</button>
+        </div>
       </div>
     </div>
-    <div class="controls">
-      <button class="reset-filter">Setel Ulang Filter</button>
-      <div class="row">
-        <input type="file" class="file-input" accept="image/*" hidden>
-        <button class="choose-img">Pilih Gambar</button>
-        <button class="save-img">Simpan Gambar</button>
-      </div>
-    </div>
-  </div>
 
-  <script src="script.js" async defer></script>
-</body>
-
+    <script src="script.js" async defer></script>
+  </body>
 </html>
