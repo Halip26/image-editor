@@ -179,11 +179,16 @@ body {
 .controls .choose-img:hover {
   background: #48aaff;
   border: 1px solid #5372f0;
+  transition: 0.2s ease;
 }
 .controls .save-img {
   margin-left: 5px;
-  background: #5372f0;
+  background: #3f66ff;
   border: 1px solid #5372f0;
+}
+
+.controls .save-img:hover {
+  background: #5a7bff;
 }
 
 @media screen and (max-width: 760px) {
