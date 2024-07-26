@@ -1,3 +1,4 @@
+// initialize all variables
 const fileInput = document.querySelector(".file-input"),
   filterOptions = document.querySelectorAll(".filter button"),
   filterName = document.querySelector(".filter-info .name"),
@@ -17,6 +18,7 @@ let rotate = 0,
   flipHorizontal = 1,
   flipVertical = 1;
 
+// function to load the image file
 const loadImage = () => {
   let file = fileInput.files[0];
   if (!file) return;
@@ -27,11 +29,13 @@ const loadImage = () => {
   });
 };
 
+// function to apply the filter & transform to preview img
 const applyFilter = () => {
   previewImg.style.transform = `rotate(${rotate}deg) scale(${flipHorizontal}, ${flipVertical})`;
   previewImg.style.filter = `brightness(${brightness}%) saturate(${saturation}%) invert(${inversion}%) grayscale(${grayscale}%)`;
 };
 
+// function to set the filters logic
 filterOptions.forEach((option) => {
   option.addEventListener("click", () => {
     document.querySelector(".active").classList.remove("active");
@@ -58,6 +62,7 @@ filterOptions.forEach((option) => {
   });
 });
 
+// function to change the filter effect based on the slider value
 const updateFilter = () => {
   filterValue.innerText = `${filterSlider.value}%`;
   const selectedFilter = document.querySelector(".filter .active");
@@ -74,6 +79,7 @@ const updateFilter = () => {
   applyFilter();
 };
 
+// function to rotate the image
 rotateOptions.forEach((option) => {
   option.addEventListener("click", () => {
     if (option.id === "left") {
@@ -89,6 +95,7 @@ rotateOptions.forEach((option) => {
   });
 });
 
+// functionn to reset back to original value
 const resetFilter = () => {
   brightness = "100";
   saturation = "100";
@@ -101,6 +108,7 @@ const resetFilter = () => {
   applyFilter();
 };
 
+// function to save the image
 const saveImage = () => {
   const canvas = document.createElement("canvas");
   const ctx = canvas.getContext("2d");
@@ -127,6 +135,7 @@ const saveImage = () => {
   link.click();
 };
 
+// connected all variables to every function
 filterSlider.addEventListener("input", updateFilter);
 resetFilterBtn.addEventListener("click", resetFilter);
 saveImgBtn.addEventListener("click", saveImage);
